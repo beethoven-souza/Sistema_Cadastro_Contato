@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SistemaCadastroContatos.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,7 @@ namespace SistemaCadastroContatos.Data
         {
 
         }
+
+        public DbSet<ContatoModel> Contatos { get; set; }
     }
 }
