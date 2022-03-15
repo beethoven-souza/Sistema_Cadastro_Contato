@@ -15,11 +15,7 @@ namespace SistemaCadastroContatos.Controllers
 
         public IActionResult Index()
         {
-            HomeModel home = new HomeModel();
-            home.Nome = "Beethoven Souza";
-            home.Email = "bthoven2009@hotmail.com";
-
-            return View(home);
+           return View();
         }
 
         public IActionResult Privacy()
