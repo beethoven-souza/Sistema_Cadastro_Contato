@@ -21,5 +21,10 @@ namespace SistemaCadastroContatos.Repositorio
             _bancoContext.SaveChanges();
             return contato;
         }
+
+        public List<ContatoModel> BuscarDados()
+        {
+            return _bancoContext.Contatos.ToList();
+        }
     }
 }
