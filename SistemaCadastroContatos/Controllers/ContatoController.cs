@@ -34,11 +34,19 @@ namespace SistemaCadastroContatos.Controllers
             return RedirectToAction("Index");
         }
 
-
-
-        public IActionResult Editar()
+        [HttpPost]
+        public IActionResult Alterar(ContatoModel contato)
         {
-            return View();
+            _contatoRepositorio.Atualizar(contato);
+            return RedirectToAction("Index");
+        }
+
+
+
+        public IActionResult Editar(int id)
+        {
+            ContatoModel contato = _contatoRepositorio.ListarPorId(id);
+            return View(contato);
         }
 
         public IActionResult ApagarConfirmar()

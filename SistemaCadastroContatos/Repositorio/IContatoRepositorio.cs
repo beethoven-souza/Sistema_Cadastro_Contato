@@ -8,7 +8,8 @@ namespace SistemaCadastroContatos.Repositorio
 {
     public interface IContatoRepositorio
     {
-
+        ContatoModel Atualizar(ContatoModel contato);
+        ContatoModel ListarPorId(int id);
         List<ContatoModel> BuscarDados();
 
         ContatoModel Adicionar(ContatoModel contato);
