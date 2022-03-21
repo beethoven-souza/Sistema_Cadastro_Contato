@@ -13,5 +13,7 @@ namespace SistemaCadastroContatos.Repositorio
         List<ContatoModel> BuscarDados();
 
         ContatoModel Adicionar(ContatoModel contato);
+
+        bool Apagar(int id);
     }
 }

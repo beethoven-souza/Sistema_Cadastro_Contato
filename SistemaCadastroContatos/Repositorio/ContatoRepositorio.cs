@@ -48,6 +48,13 @@ namespace SistemaCadastroContatos.Repositorio
             return _bancoContext.Contatos.ToList();
         }
 
-        
+        public bool Apagar(int id)
+        {
+            ContatoModel contatoDB = ListarPorId(id);
+            if (contatoDB == null) throw new System.Exception("Houve um erro ao tentar apagar esse contato");
+            _bancoContext.Contatos.Remove(contatoDB);
+            _bancoContext.SaveChanges();
+            return true;
+        }
     }
 }
